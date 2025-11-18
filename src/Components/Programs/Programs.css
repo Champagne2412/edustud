@@ -33,11 +33,21 @@
   transition: 0.4s;
 }
 .caption img {
-    width: 60px;
-    margin-bottom: 10px;
-
+  width: 60px;
+  margin-bottom: 10px;
 }
-.program:hover .caption{
-    opacity: 1;
-    padding-bottom: 0;
+.program:hover .caption {
+  opacity: 1;
+  padding-bottom: 0;
+}
+
+/* media query */
+@media (max-width: 850px) {
+  .programs {
+    flex-direction: column;
+  }
+  .program {
+    flex-basis: 100%;
+    margin: 20px;
+  }
 }
