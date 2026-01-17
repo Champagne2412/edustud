@@ -6,15 +6,18 @@ import phone_icon from "../../assets/phone-icon.png";
 import location_icon from "../../assets/location-icon.png";
 import white_arrow from "../../assets/white-arrow.png";
 
+
 const Contact = () => {
   const [result, setResult] = React.useState("");
 
+  
   const onSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending....");
     const formData = new FormData(event.target);
+    const emailKey= import.meta.env.VITE_WEB3FORMS_KEY;
 
-    formData.append("access_key", "94fb122f-877f-4320-afb6-57bbe899e91f");
+    formData.append("access_key", emailKey);
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
